@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #F94649 0%, #F84468 30%, #F63FC0 66%, #6C7EFF 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 50%;
+    text-align: center;
+}
+
+.login-container {
+    width: 30%;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 20vh;
+
+}
+button {
+    background: #FFFFFF4F 0% 0% no-repeat padding-box;
+    border-radius: 50px;
+    width: 30%;
+    border: none;
+    color: white;
+    margin: 1en;
+    line-height: 2.5em;
+    
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.726);
+    padding: 1em;
+    margin: 1em;
+    width: 50%;
+    color: rgba(255, 255, 255, 0.726);
+}
+
+input::placeholder { 
+    color:rgba(255, 255, 255, 0.726);
+  }

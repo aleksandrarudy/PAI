@@ -1,0 +1,20 @@
+section {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1em;
+    padding: 2em;
+    overflow: auto;
+    grid-auto-rows: auto;
+}
+
+.images>div>img {
+    object-fit: cover;
+    size: auto;
+    border-radius: 50px;
+}
+
+.images>div>.image-1 {
+    size:auto;
+
+}

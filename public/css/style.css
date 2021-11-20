@@ -1,6 +1,5 @@
 body {
     margin: 0;
-
 }
 
 .container {
@@ -13,34 +12,85 @@ body {
     align-items: center;
 }
 
+.m-container {
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #F94649 0%, #F84468 30%, #F63FC0 66%, #6C7EFF 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo {
     width: 50%;
     text-align: center;
 }
 
-.login-container {
-    width: 30%;
+.main-page-logo{
+    width: 100%;
+    text-align: center;
 
 }
 
-form {
+.login-container {
+    width: 40vw;
+
+}
+
+.main-container{
+    width: 100%;
+    
+}
+
+form.login {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    height: 20vh;
+    width: 100%;
+    height: 50vh;
 
 }
-button {
+
+form.mainpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+}
+
+
+button.logsig {
     background: #FFFFFF4F 0% 0% no-repeat padding-box;
     border-radius: 50px;
     width: 30%;
     border: none;
     color: white;
-    margin: 1en;
+    margin-top: 1em;
     line-height: 2.5em;
+}
+
+button.login {
+    background: #FFFFFF4F 0% 0% no-repeat padding-box;
+    border-radius: 50px;
+    width: 10%;
+    border: none;
+    color: white;
+    line-height: 2.5em;
+
     
+}
+
+button.signup {
+    background: #FFFFFF4F 0% 0% no-repeat padding-box;
+    border-radius: 50px;
+    width: 10%;
+    border: none;
+    color: white;
+    line-height: 2.5em;
 }
 
 input {
@@ -56,3 +106,70 @@ input {
 input::placeholder { 
     color:rgba(255, 255, 255, 0.726);
   }
+
+
+
+.dashboard-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+
+
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em 2em;
+    height: 10vh;
+    margin-bottom: 1em;
+    
+    
+
+}
+header>img {
+    margin-top: 1em;
+
+}
+
+.search-bar {
+    width: 50vw;
+    align-self: center;
+   
+}
+
+.search-bar>form>input{
+    background: transparent linear-gradient(101deg, #f9464948 0%, hsla(348, 93%, 62%, 0.233) 30%, #f63fbf48 66%, #6c7dff3d 100%) 0% 0% no-repeat padding-box;
+    border-radius: 25px;
+    width: 35vw;
+    height: 1vh;
+    
+}
+
+.search-bar>form>input::placeholder {
+    color: gray;
+}
+.search-bar>form>i {
+    color: gray;
+}
+
+button.profil {
+    display: block;
+    background: transparent linear-gradient(180deg, #F94649 0%, #F84468 18%, #F63FC0 53%, #6C7EFF 100%) 0% 0% no-repeat padding-box;
+    border-radius: 100%;
+    border: none;
+    margin: 1em;
+}
+
+button.profil>i {
+    width: 3vw;
+    color: white;
+}
+

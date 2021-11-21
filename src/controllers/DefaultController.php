@@ -4,7 +4,7 @@ require_once 'AppController.php';
 
 class DefaultController extends AppController {
 
-    public function login() 
+    public function main()
     {
         $this->render('login');
 
@@ -32,7 +32,11 @@ class DefaultController extends AppController {
         $this->render('categories');
 
     }
+    public function articles() 
+    {
+        $this->render('articles');
 
+    }
 
 
 }

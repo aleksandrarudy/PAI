@@ -9,4 +9,5 @@ Routing::get('login', 'DefaultController');
 Routing::get('signUp', 'DefaultController');
 Routing::get('mainPage', 'DefaultController');
 Routing::get('dashboard', 'DefaultController');
+Routing::get('categories', 'DefaultController');
 Routing::run($path);

@@ -127,29 +127,28 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1em 2em;
-    height: 10vh;
-    margin-bottom: 1em;
-    
-    
-
+    object-fit: cover;
+    position: fixed;
+    background: white;
+    width: 100vw;
+    height: 15vh;
 }
 header>img {
-    margin-top: 1em;
+    margin: 1.5em 0 1em 2.5em;
 
 }
 
 .search-bar {
-    width: 50vw;
+    width: auto;
     align-self: center;
    
 }
 
 .search-bar>form>input{
     background: transparent linear-gradient(101deg, #f9464948 0%, hsla(348, 93%, 62%, 0.233) 30%, #f63fbf48 66%, #6c7dff3d 100%) 0% 0% no-repeat padding-box;
-    border-radius: 25px;
-    width: 35vw;
-    height: 1vh;
+    border-radius: 50px;
+    width: 45vw;
+    height: 2vh;
     
 }
 
@@ -163,13 +162,16 @@ header>img {
 button.profil {
     display: block;
     background: transparent linear-gradient(180deg, #F94649 0%, #F84468 18%, #F63FC0 53%, #6C7EFF 100%) 0% 0% no-repeat padding-box;
-    border-radius: 100%;
+    border-radius: 100px;
     border: none;
-    margin: 1em;
+    margin: 2em 3em 1em 1em;
+    width: 50px;
+    height: 50px;
+    
+    outline: none;
 }
 
 button.profil>i {
-    width: 3vw;
     color: white;
 }
 

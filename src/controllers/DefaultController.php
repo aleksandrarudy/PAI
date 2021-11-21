@@ -27,8 +27,11 @@ class DefaultController extends AppController {
         $this->render('dashboard');
 
     }
-    
+    public function categories() 
+    {
+        $this->render('categories');
 
+    }
 
 
 

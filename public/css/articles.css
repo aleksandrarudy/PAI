@@ -1,0 +1,48 @@
+.articles {
+    margin: 6em 0 0 0;
+    position:fixed;
+    background: white;
+    width: 100vw;
+    height: 10vh;
+}
+
+.article {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    overflow: auto;
+    margin: 12em 2em 2em 2em;
+}
+
+.article>div>img {
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1em 1em 0 0 ;
+}
+
+.article>div>div {
+    height: fit-content;
+    text-align: left;
+    font-family: Arial;
+    letter-spacing: 0px;
+    color: #707070;
+    margin:0 1em 1em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around ;
+
+}
+
+.article>div {
+    height: 300px;
+    width: auto;
+    border: 1px solid grey;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+

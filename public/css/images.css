@@ -1,5 +1,5 @@
 .category {
-    margin: 6em 0 0 0;
+    margin: 7em 0 0 0;
     position:fixed;
     background: white;
     width: 100vw;
@@ -26,7 +26,9 @@ P.header {
     grid-gap: 15px;
     margin: 7em 2em 2em 2em;
     object-fit: cover;
+
 }
+
 
 .gallery_categories {
     display: grid;

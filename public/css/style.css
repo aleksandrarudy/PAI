@@ -29,6 +29,10 @@ body {
     cursor: pointer;
 }
 
+.logo>img{
+    width: 100%;
+}
+
 .main-page-logo{
     width: 100%;
     text-align: center;

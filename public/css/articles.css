@@ -1,9 +1,17 @@
+.articles-container{
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    grid-template-rows: 15% 5% min-content;
+}
 .articles {
-    margin: 7em 0 0 0;
-    position:fixed;
+    display: grid;
+    grid-template-columns: repeat(20, 5%);
+    margin:0;
     background: white;
     width: 100vw;
-    height: 10vh;
+    height: 5vh;
 }
 
 .article {
@@ -11,7 +19,8 @@
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 15px;
     overflow: auto;
-    margin: 12em 2em 2em 2em;
+    margin: 0em 2em 2em 2em;
+
 }
 
 .article>div>img {

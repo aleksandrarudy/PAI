@@ -2,22 +2,30 @@ body{
     font-family: "Segoe UI";
 }
 
+.profile-container{
+    display: grid;
+    align-items: center;
+    height: 100vh;
+    grid-auto-rows: 15% 40% 45%;
+}
+
 .profile{
-    display: flex;
-    margin: 9em 10em 2em 10em;
+    display: grid;
     justify-content: center;
     align-content: flex-start;
     flex-direction: row;
-    height: 35vh;
     border-bottom: 1px solid rgba(112, 112, 112, 0.57);
+    grid-template-columns: repeat(10, 10%);
+    grid-row: 2/3;
 }
 
 .profile-picture
 {
-    justify-content: left;
+    justify-self: center;
     width: 200px;
     height: 200px;
-    margin: 0 3em 0 3em;
+    grid-column: 3/5;
+    margin-bottom: 2em;
 }
 
 .profile-picture img
@@ -51,6 +59,12 @@ a.edit-profile-button:hover{
 
 .user-name-biogram{
     width: 20vw;
+    grid-column: 5/7;
+    justify-self: center;
+}
+
+.edit-button{
+    grid-column: 8/9;
 }
 
 h2.user-name {
@@ -76,12 +90,11 @@ p.biogram {
 
 }
 .profile-feed{
-    display: flex;
-    margin: 2em 10em 2em 10em;
-    justify-content: center;
+    display: grid;
     align-items: center;
-    flex-direction: row;
-    height: 35vh;
+    grid-template-columns: repeat(20, 5%);
+    grid-template-rows: 50% 50%;
+    grid-row:3/4;
 }
 
 a.feed-button{
@@ -101,4 +114,19 @@ a.feed-button{
 a.feed-button:hover {
     background:  transparent linear-gradient(180deg, rgba(249, 70, 73, 0.9) 0%, rgba(248, 68, 104, 0.9) 18%, rgba(246, 63, 192, 0.9) 53%, rgba(108, 126, 255, 0.9) 100%) 0% 0% no-repeat padding-box;
     color: #ffffff;
+}
+
+
+.add-post{
+    grid-column: 8/10;
+    grid-row: 1/2;
+}
+
+.saved-posts{
+    grid-column: 10/12;
+    grid-row: 1/2;
+}
+.your-posts{
+    grid-column: 12/14;
+    grid-row: 1/2;
 }

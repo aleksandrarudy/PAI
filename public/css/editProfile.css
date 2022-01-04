@@ -3,9 +3,15 @@ body{
     font-family: "Segoe UI";
 }
 
+.edit-profile-container{
+    display: grid;
+    align-items: center;
+    height: 100vh;
+}
+
 .edit-profile{
     display: flex;
-    margin: 9em 10em 2em 10em;
+    margin: 0em 10em 2em 10em;
     justify-content: flex-start;
     align-content: center;
     flex-direction: column;

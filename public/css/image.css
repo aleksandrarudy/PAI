@@ -1,21 +1,18 @@
 .im-container{
-    display: flex;
-    margin: 9em 3em 2em 2em;
-    justify-content: left;
-    align-content: flex-start;
-    flex-direction: row;
+    display: grid;
+    margin: 0;
     height: 85vh;
-    border-bottom: 1px solid rgba(112, 112, 112, 0.57);
+    grid-template-columns: 60% 40%;
 }
 
 .image-container{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-auto-rows: 80% 20%;
 
 }
 
 .image{
-    margin:1em 0 1em 0;
+    margin: 1em 2em;
     width: 55vw;
     height: 65vh;
     background: transparent linear-gradient(133deg, rgba(249, 70, 73, 0.24) 0%, rgba(248, 68, 104, 0.24) 30%, rgba(246, 63, 192, 0.24) 66%, rgba(108, 126, 255, 0.24) 100%) 0% 0% no-repeat padding-box;
@@ -27,6 +24,7 @@
     border-radius: 0px 0px 40px 40px;
     color: white;
     align-self: flex-start;
+    margin-inline: 2em;
 }
 
 .image-footer i{
@@ -43,7 +41,6 @@
 .information{
     display: flex;
     flex-direction: column;
-    margin: 0 2em 0 2em;
 }
 
 .profile-picture
@@ -137,3 +134,57 @@ a.description{
 a.camera-specification{
     color: #707070;
 }
+
+
+input.hashtags-and-description{
+    background: white;
+    border-radius: 50px;
+    width: 25vw;
+    height: 5vh;
+    border: 1px solid #707070;
+
+}
+
+input.Camera{
+    background: white;
+    border-radius: 50px;
+    width: 15vw;
+    height: 3vh;
+    border: 1px solid #707070;
+}
+
+input.Lens{
+    background: white;
+    border-radius: 50px;
+    width: 15vw;
+    height: 3vh;
+    border: 1px solid #707070;
+}
+input.var{
+    background: white;
+    border-radius: 50px;
+    width: 15vw;
+    height: 3vh;
+    border: 1px solid #707070;
+}
+
+a.add-image-button{
+    display: block;
+    background: transparent linear-gradient(101deg, rgba(249, 70, 73, 0.3) 0%, rgba(248, 68, 104, 0.3) 30%, rgba(246, 63, 192, 0.3) 66%, rgba(108, 126, 255, 0.3) 100%) 0% 0% no-repeat padding-box;
+    border-radius: 0 0 40px 40px;
+    width: 55vw;
+    height: 50px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font: normal normal bold 13px/50px Segoe UI;
+    letter-spacing: 0px;
+    color: #484848;
+    justify-self: center;
+    margin-left: 2.5em;
+}
+a.add-image-button:hover {
+    background: transparent linear-gradient(101deg, rgba(249, 70, 73, 0.9) 0%, rgba(248, 68, 104, 0.9) 30%, rgba(246, 63, 192, 0.9) 66%, rgba(108, 126, 255, 0.9) 100%) 0% 0% no-repeat padding-box;
+    color: #ffffff;
+}
+

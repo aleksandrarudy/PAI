@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+}
+.article-container{
+    display: grid;
+    grid-template-rows: 15% 40% auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.atricle-title-background{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    background: transparent linear-gradient(101deg, rgba(249, 70, 73, 0.3) 0%, rgba(248, 68, 104, 0.3) 30%, rgba(246, 63, 192, 0.3) 66%, rgba(108, 126, 255, 0.3) 100%) 0% 0% no-repeat padding-box;
+}
+
+.atricle-title-background>h1{
+    grid-row: 2/4;
+    grid-column: 2/4;
+    font: normal normal 500 70px/60px "Segoe UI";
+    color: white;
+}
+
+.atricle-content{
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: 10% auto;
+}
+
+
+.atricle-content>a{
+    grid-column: 3/9;
+    grid-row: 2/3;
+    font-family: Segoe UI;
+    font-size: medium;
+    justify-self: center;
+    text-align: justify
+}

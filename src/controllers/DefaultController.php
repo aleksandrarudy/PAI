@@ -37,6 +37,31 @@ class DefaultController extends AppController {
         $this->render('articles');
 
     }
+    public function articleSingle()
+    {
+        $this->render('articlesSingle');
+
+    }
+    public function profile()
+    {
+        $this->render('profile');
+
+    }
+    public function editProfile()
+    {
+        $this->render('editProfile');
+
+    }
+    public function image()
+    {
+        $this->render('image');
+
+    }
+    public function addImage()
+    {
+        $this->render('addImage');
+
+    }
 
 
 }

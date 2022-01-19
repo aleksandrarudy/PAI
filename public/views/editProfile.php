@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/articles.css">
-    <link rel="stylesheet" type="text/css" href="../css/editProfile.css">
-    <link rel="stylesheet" type="text/css" href="../css/images-grid.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/articles.css">
+    <link rel="stylesheet" type="text/css" href="public/css/editProfile.css">
+    <link rel="stylesheet" type="text/css" href="public/css/images-grid.css">
 
     <script src="https://kit.fontawesome.com/c7d1b0ffc1.js" crossorigin="anonymous"></script>
     <title>EDIT PROFILE</title>
@@ -16,8 +16,8 @@
 <div class="edit-profile-container">
 
         <header>
-            <a href="../views/dashboard.html">
-                <img src="../img/logo-gradient.svg">
+            <a href="dashboard">
+                <img src="public/img/logo-gradient.svg">
             </a>
 
             <div class="search-bar">
@@ -26,7 +26,7 @@
                     <i class="fas fa-search"></i>
                 </form>
             </div>
-            <a href="profile.html" class="profil">
+            <a href="profile" class="profil">
                 <i class="fas fa-user"></i>
             </a>
         </header>
@@ -34,7 +34,7 @@
         <div class="edit-profile">
             <div class="picture-and-biogram">
                 <div class="profile-picture">
-                    <img src="../img/uploads/vladimir-kozhevnikov-VwZuLjeTqqo-unsplash.jpg">
+                    <img src="public/img/uploads/vladimir-kozhevnikov-VwZuLjeTqqo-unsplash.jpg">
                 </div>
                 <div class="biogram">
                     <h2 class="user-name">User-name</h2>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="data">
                     <a class="delete-button">Delete account</a>
-                    <a href="profile.html" class="save-button">Save changes</a>
+                    <a href="profile" class="save-button">Save changes</a>
                 </div>
 
             </div>

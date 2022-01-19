@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <title>SIGN UP</title>
 </head>
 <body>
     <div class="container">
-        <div class="logo">
-            <img src="../img/logo.svg">
-        </div> 
+        <a class="logo" href="mainPage">
+            <img src="public/img/logo.svg">
+        </a>
         <div class="login-container">
             <form class="login">
                 <input class="login-input" name="user name" type="text" placeholder="user name">

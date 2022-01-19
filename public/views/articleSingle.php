@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="../css/article.css">
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="public/css/article.css">
+  <link rel="stylesheet" type="text/css" href="public/css/style.css">
   <script src="https://kit.fontawesome.com/c7d1b0ffc1.js" crossorigin="anonymous"></script>
   <title>ARTICLE</title>
 </head>
 <body>
   <div class="article-container">
     <header>
-      <a href="../views/dashboard.html">
-        <img src="../img/logo-gradient.svg">
+      <a href="dashboard">
+        <img src="public/img/logo-gradient.svg">
       </a>
 
       <div class="search-bar">
@@ -22,7 +22,7 @@
           <i class="fas fa-search"></i>
         </form>
       </div>
-      <a href="profile.html" class="profil">
+      <a href="profile" class="profil">
         <i class="fas fa-user"></i>
       </a>
     </header>

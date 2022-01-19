@@ -23,11 +23,12 @@ body {
     align-items: center;
 }
 
-.logo {
+a.logo {
     width: 100%;
     justify-self: center;
     align-self: center;
     text-align: center;
+    text-decoration: none;
 }
 
 .logo>img{
@@ -98,6 +99,7 @@ button.logsig {
     text-decoration: none;
     text-align: center;
 }
+
 input.login-input {
     background-color: transparent;
     border: none;

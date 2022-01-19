@@ -17,6 +17,7 @@
     height: 65vh;
     background: transparent linear-gradient(133deg, rgba(249, 70, 73, 0.24) 0%, rgba(248, 68, 104, 0.24) 30%, rgba(246, 63, 192, 0.24) 66%, rgba(108, 126, 255, 0.24) 100%) 0% 0% no-repeat padding-box;
 }
+
 .image-footer{
     width: 55vw;
     height: 7vh;
@@ -41,6 +42,7 @@
 .information{
     display: flex;
     flex-direction: column;
+    margin-left: 1em;
 }
 
 .profile-picture
@@ -95,9 +97,9 @@ a.user-name{
     flex-direction: row;
     margin: 0.5em;
     align-content: center;
-    width: 25vw;
+    width: 35vw;
     height: 30vh;
-    justify-content: space-between;
+    justify-content: flex-start;
 
 }
 
@@ -109,10 +111,10 @@ a.user-name{
 .part{
     display: flex;
     flex-direction: column;
-    margin: 0.5em;
+    margin: 0.5em 1em 0.5em 0.5em;
     align-content: center;
     height: 25vh;
-    justify-content: space-between;
+    justify-content: space-between
 }
 .icons-with-var{
     display: flex;
@@ -123,68 +125,111 @@ a.user-name{
 .icons-with-var img{
     align-self: center;
 }
-a.var{
+p.var{
     margin: 1em;
     color: #707070;
 }
-a.description{
+p.description{
     color: #707070;
 }
 
-a.camera-specification{
+p.camera-specification{
     color: #707070;
 }
 
 
-input.hashtags-and-description{
+textarea.hashtags-and-description{
     background: white;
-    border-radius: 50px;
-    width: 25vw;
-    height: 5vh;
+    border-radius: 25px;
     border: 1px solid #707070;
+    padding: 1em;
+    width: 28vw;
+    font-family: "Segoe UI";
 
 }
 
 input.Camera{
     background: white;
     border-radius: 50px;
-    width: 15vw;
-    height: 3vh;
+    width: 10vw;
+    height: 4vh;
     border: 1px solid #707070;
+    padding-left: 1em;
+    margin: 0.5em
 }
 
 input.Lens{
     background: white;
     border-radius: 50px;
-    width: 15vw;
-    height: 3vh;
+    width: 10vw;
+    height: 4vh;
     border: 1px solid #707070;
+    padding-left: 1em;
+    margin: 0.5em
 }
 input.var{
     background: white;
-    border-radius: 50px;
-    width: 15vw;
-    height: 3vh;
+    border-radius: 25px;
+    width: 10vw;
+    height: 4vh;
     border: 1px solid #707070;
+    margin-left: 1em;
+    padding-left: 1em;
 }
 
-a.add-image-button{
+.add-image-input{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.add-image-input + label {
+
     display: block;
     background: transparent linear-gradient(101deg, rgba(249, 70, 73, 0.3) 0%, rgba(248, 68, 104, 0.3) 30%, rgba(246, 63, 192, 0.3) 66%, rgba(108, 126, 255, 0.3) 100%) 0% 0% no-repeat padding-box;
     border-radius: 0 0 40px 40px;
     width: 55vw;
-    height: 50px;
+    height: 7vh;
     border: none;
     outline: none;
     text-align: center;
-    font: normal normal bold 13px/50px Segoe UI;
+    font: normal normal  14px/50px Segoe UI;
     letter-spacing: 0px;
-    color: #484848;
+    color: black;
     justify-self: center;
     margin-left: 2.5em;
+    text-decoration: none;
 }
-a.add-image-button:hover {
+.add-image-input+label :hover {
     background: transparent linear-gradient(101deg, rgba(249, 70, 73, 0.9) 0%, rgba(248, 68, 104, 0.9) 30%, rgba(246, 63, 192, 0.9) 66%, rgba(108, 126, 255, 0.9) 100%) 0% 0% no-repeat padding-box;
+    color: #ffffff;
+}
+
+.add-image-input +label{
+    cursor: pointer;
+}
+
+.add-post{
+    display: flex;
+    width: 31vw;
+    justify-content: right;
+}
+
+button.add-post-button {
+    border-radius: 25px;
+    border: none;
+    background: transparent linear-gradient(180deg, rgba(249, 70, 73, 0.2) 0%, rgba(248, 68, 104, 0.2) 18%, rgba(246, 63, 192, 0.2) 53%, rgba(108, 126, 255, 0.2) 100%) 0% 0% no-repeat padding-box;
+    width: 120px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+button.add-post-button:hover{
+    background:  transparent linear-gradient(180deg, rgba(249, 70, 73, 0.9) 0%, rgba(248, 68, 104, 0.9) 18%, rgba(246, 63, 192, 0.9) 53%, rgba(108, 126, 255, 0.9) 100%) 0% 0% no-repeat padding-box;
     color: #ffffff;
 }
 

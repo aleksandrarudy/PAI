@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <title>PIXAGE</title>
 </head>
 <body>
     <div class="m-container">
-        <div class="main-page-logo">
-            <img src="../img/logo.svg">
-        </div> 
+        <a class="main-page-logo" href="mainPage">
+            <img src="public/img/logo.svg">
+        </a>
         <div class="main-container">
             <form class="mainpage">
-                <a href="login.html" class="login-signup-button">login</a>
-                <a href="signUp.html" class="login-signup-button">sign up</a>
+                <a href="login" class="login-signup-button">login</a>
+                <a href="signUp" class="login-signup-button">sign up</a>
 
             </form> 
         </div>

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/articles.css">
-    <link rel="stylesheet" type="text/css" href="../css/images-grid.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/articles.css">
+    <link rel="stylesheet" type="text/css" href="public/css/images-grid.css">
     <script src="https://kit.fontawesome.com/c7d1b0ffc1.js" crossorigin="anonymous"></script>
     <title>ARTICLES</title>
 </head>
@@ -14,8 +14,8 @@
     <div class="articles-container">
 
             <header>
-                <a href="../views/dashboard.html">
-                    <img src="../img/logo-gradient.svg">
+                <a href="dashboard">
+                    <img src="public/img/logo-gradient.svg">
                 </a>
 
                 <div class="search-bar">
@@ -24,7 +24,7 @@
                         <i class="fas fa-search"></i>
                     </form>
                 </div>
-                <a href="profile.html" class="profil">
+                <a href="profile" class="profil">
                     <i class="fas fa-user"></i>
                 </a>
             </header>
@@ -34,7 +34,7 @@
             
             <div class="article">
               <div id="article-1">
-                <img src="../img/articles/horizontal-1.jpg">
+                <img src="public/img/articles/horizontal-1.jpg">
                 <div>
                   <h2>Title</h2>
                   <p class="description">description</p>
@@ -44,7 +44,7 @@
                 </div>
               </div>
               <div id="article-2">
-                <img src="../img/articles/horizontal-2.jpg">
+                <img src="public/img/articles/horizontal-2.jpg">
                 <div>
                   <h2>Title</h2>
                   <p class="description">description</p>
@@ -54,7 +54,7 @@
                 </div>
               </div>
               <div id="article-3">
-                <img src="../img/articles/horizontal-3.jpg">
+                <img src="public/img/articles/horizontal-3.jpg">
                 <div>
                   <h2>Title</h2>
                   <p class="description">description</p>
@@ -64,7 +64,7 @@
                 </div>
               </div>
               <div id="article-4">
-                <img src="../img/articles/horizontal-4.jpg">
+                <img src="public/img/articles/horizontal-4.jpg">
                 <div>
                   <h2>Title</h2>
                   <p class="description">description</p>
@@ -74,7 +74,7 @@
                 </div>
               </div>
               <div id="article-5">
-                <img src="../img/articles/horizontal-5.jpg">
+                <img src="public/img/articles/horizontal-5.jpg">
                 <div>
                   <h2>Title</h2>
                   <p class="description">description</p>
@@ -84,7 +84,7 @@
                 </div>
               </div>
               <div id="article-6">
-                <img src="../img/articles/horizontal-6.jpg">
+                <img src="public/img/articles/horizontal-6.jpg">
                 <div>
                   <h2>Title</h2>
                   <p class="description">description</p>
@@ -94,7 +94,7 @@
                 </div>
               </div>
               <div id="article-7">
-                <img src="../img/articles/horizontal-6.jpg">
+                <img src="public/img/articles/horizontal-6.jpg">
                 <div>
                   <h2>Title</h2>
                   <p class="description">description</p>
@@ -104,7 +104,7 @@
                 </div>
               </div>
               <div id="article-8">
-                <img src="../img/articles/horizontal-6.jpg">
+                <img src="public/img/articles/horizontal-6.jpg">
                 <div>
                   <h2>Title</h2>
                   <p class="description">description</p>
@@ -114,7 +114,7 @@
                 </div>
               </div>
               <div id="article-9">
-                <img src="../img/articles/horizontal-6.jpg">
+                <img src="public/img/articles/horizontal-6.jpg">
                 <div>
                   <h2>Title</h2>
                   <p class="description">description</p>
@@ -124,7 +124,7 @@
                 </div>
               </div>
               <div id="article-10">
-                <img src="../img/articles/horizontal-6.jpg">
+                <img src="public/img/articles/horizontal-6.jpg">
                 <div>
                   <h2>Title</h2>
                   <p class="description">description</p>

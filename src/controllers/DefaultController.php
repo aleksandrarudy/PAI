@@ -23,11 +23,7 @@ class DefaultController extends AppController {
     }
 
 
-    public function categories() 
-    {
-        $this->render('categories');
 
-    }
     public function articles() 
     {
         $this->render('articles');
@@ -48,11 +44,7 @@ class DefaultController extends AppController {
         $this->render('editProfile');
 
     }
-    public function image()
-    {
-        $this->render('image');
 
-    }
     public function addImage()
     {
         $this->render('addImage');

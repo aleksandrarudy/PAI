@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/image.css">
     <link rel="stylesheet" type="text/css" href="public/css/editProfile.css">
     <script src="https://kit.fontawesome.com/c7d1b0ffc1.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./public/js/preview.js" defer></script>
     <title>ADD-IMAGE</title>
 </head>
 <body>
@@ -37,10 +38,10 @@
             }
             ?>
             <div class="image-container">
-                <div class="image">
+                <div class="added-image" id="added-image">
                 </div>
                 <div class="add-image">
-                    <input type="file" name="file" id="file" class="add-image-input">
+                    <input type="file" name="file" id="file" class="add-image-input" accept="image/*">
                     <label for="file">Choose a file</label>
                 </div>
             </div>
@@ -65,7 +66,7 @@
                     <img src="public/img/icons/camera-icon.svg">
                     <div class="camera-lens">
                         <a class="camera-specification">Camera: </a>
-                        <input class="Camera" name="camera" type="text" placeholder="Camera">
+                        <input class="Camera" name="camera" type="text" placeholder="Camera"><br>
                         <a class="camera-specification">Lens: </a>
                         <input class="Lens" name="lens" type="text" placeholder="Lens">
                     </div>

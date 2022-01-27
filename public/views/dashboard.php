@@ -30,8 +30,8 @@
             </header>
             <div class="gallery">
                 <?php foreach($images as $image): ?>
-                      <a class="gallery__item gallery__item--1" href="image">
-                          <img src="public/img/uploads/<?= $image->getPicture() ?>" class="gallery__img" alt="Image 1">
+                      <a class="gallery-item" href="image/<?= $image->getIdImg() ?>">
+                          <img src="public/img/uploads/<?= $image->getPicture() ?>" class="image-item">
                       </a>
                 <?php endforeach; ?>
             </div>
@@ -40,8 +40,8 @@
     
 </body>
 <template id="image-template">
-    <a class="gallery__item gallery__item--1" href="image">
-        <img src="" class="gallery__img" alt="Image 1">
+    <a class="gallery-item" href="image">
+        <img src="" class="image-item">
     </a>
 </template>
 

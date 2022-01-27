@@ -2,6 +2,8 @@
 
 class Image
 {
+    private $id_img;
+    private $category;
     private $picture;
     private $description;
     private $camera;
@@ -13,7 +15,7 @@ class Image
     private $focus;
     private $iso;
 
-    public function __construct($camera, $lens, $flash, $aperture, $exposure, $focus, $iso, $light, $description, $picture)
+    public function __construct($camera, $lens, $flash, $aperture, $exposure, $focus, $iso, $light, $description, $picture, $category=null, $id_img=null)
     {
         $this->camera = $camera;
         $this->lens = $lens;
@@ -25,8 +27,31 @@ class Image
         $this->light = $light;
         $this->description = $description;
         $this->picture = $picture;
+        $this->category = $category;
+        $this->id_img = $id_img;
+
     }
 
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    public function setCategory($category): void
+    {
+        $this->category = $category;
+    }
+
+
+    public function getIdImg()
+    {
+        return $this->id_img;
+    }
+
+    public function setIdImg($id_img): void
+    {
+        $this->id_img = $id_img;
+    }
 
     public function getCamera()
     {

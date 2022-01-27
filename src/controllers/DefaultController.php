@@ -22,11 +22,7 @@ class DefaultController extends AppController {
 
     }
 
-    public function dashboard() 
-    {
-        $this->render('dashboard');
 
-    }
     public function categories() 
     {
         $this->render('categories');

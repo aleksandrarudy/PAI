@@ -8,7 +8,7 @@ $path = parse_url($path, PHP_URL_PATH);
 Routing::get('main', 'DefaultController');
 Routing::get('signUp', 'DefaultController');
 Routing::get('mainPage', 'DefaultController');
-Routing::get('dashboard', 'DefaultController');
+Routing::get('dashboard', 'ImageController');
 Routing::get('categories', 'DefaultController');
 Routing::get('articles', 'DefaultController');
 Routing::get('articleSingle', 'DefaultController');
@@ -18,4 +18,6 @@ Routing::get('image', 'DefaultController');
 Routing::get('addImage', 'DefaultController');
 Routing::post('login', 'SecurityController');
 Routing::post('addImage', 'ImageController');
+Routing::post('search', 'ImageController');
+
 Routing::run($path);

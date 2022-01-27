@@ -19,10 +19,10 @@
             </a>
 
             <div class="search-bar">
-                <form>
+
                     <input class="search-input" placeholder="search">
                     <i class="fas fa-search"></i>
-                </form>
+
             </div>
             <a href="profile" class="profil">
                 <i class="fas fa-user"></i>

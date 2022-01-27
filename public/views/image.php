@@ -19,10 +19,10 @@
         </a>
 
         <div class="search-bar">
-            <form>
+
                 <input class="search-input" placeholder="search">
                 <i class="fas fa-search"></i>
-            </form>
+
         </div>
         <a href="profile" class="profil">
             <i class="fas fa-user"></i>
@@ -50,6 +50,7 @@
                 <p class="description"><?= $image->getDescription() ?></p>
 
             </div>
+
             <div class="image-specification">
                 <img src="public/img/icons/camera-icon.svg">
                 <div class="camera-lens">

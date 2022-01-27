@@ -19,10 +19,10 @@
         </a>
 
         <div class="search-bar">
-            <form>
+
                 <input class="search-input" placeholder="search">
                 <i class="fas fa-search"></i>
-            </form>
+
         </div>
         <a href="profile" class="profil">
             <i class="fas fa-user"></i>
@@ -47,6 +47,19 @@
             <div class="information">
                 <div class="image-description">
                     <textarea class="hashtags-and-description" rows="5" name="description" placeholder="Description..."></textarea>
+                </div>
+                <div class="category-list">
+                    <ol>
+                        <li><a >Category</a>
+                            <ul>
+                                <li><a >Animal</a></li>
+                                <li><a >People</a></li>
+                                <li><a >Monochrome</a></li>
+                                <li><a >Landscape</a></li>
+                                <li><a >Portrait</a></li>
+                            </ul>
+                        </li>
+                    </ol>
                 </div>
                 <div class="image-specification">
                     <img src="public/img/icons/camera-icon.svg">

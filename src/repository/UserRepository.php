@@ -20,10 +20,31 @@ class UserRepository extends Repository
         }
 
         return new User(
+            $user['id_user'],
             $user['email'],
             $user['password'],
-            $user['user_name'],
-            $user['first_last_name']
+            $user['user_name']
         );
     }
+
+    public function addUser(User $user): string{
+        if(($this->getUser($user->getEmail()))!=null){
+            return "user already exist";
+        }
+        try{
+            $stmt= $this->database->connect()->prepare('
+                insert into public.user(email, password, user_name) values (?,?,?)
+            ');
+            $stmt->execute([
+                $user->getEmail(),
+                $user->getPassword(),
+                $user->getUsername()
+            ]);
+            return "user created";
+        }
+        catch(PDOException $e){
+            return $e;
+        }
+    }
+
 }

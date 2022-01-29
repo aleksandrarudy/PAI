@@ -6,6 +6,13 @@ require_once __DIR__.'/../repository/UserRepository.php';
 
 class SecurityController extends AppController
 {
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->userRepository=new UserRepository();
+    }
+
     public function login()
     {
         $userRepository = new UserRepository();
@@ -31,9 +38,42 @@ class SecurityController extends AppController
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
 
+        if(!isset($_COOKIE['user'])){
+            $cookie_id = $user->getId();
+            $cookie_user = $user->getEmail();
+
+            setcookie('id', $cookie_id, time()+(86400*30),'/');
+            setcookie('user', $cookie_user, time()+(86400*30),'/');
+        }
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/dashboard");
 
+    }
+
+    public function register()
+    {
+        if(!$this->isPost()){
+           return $this->render('signUp');
+        }
+        $user = new User(
+            null,
+            $_POST['email'],
+            $_POST['password'],
+            $_POST['user_name']
+
+        );
+        $message = $this->userRepository->addUser($user);
+        return $this->render('login',['messages'=>[$message]]);
+
+    }
+
+    public function logout(){
+        if(isset($_COOKIE['user'])){
+            setcookie('user', '', time()-(86400*30),'/');
+            setcookie('id', '', time()-(86400*30),'/');
+        }
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/login");
     }
 }

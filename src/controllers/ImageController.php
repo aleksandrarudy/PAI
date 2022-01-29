@@ -15,6 +15,11 @@ class ImageController extends AppController
     private $messages = [];
     private $imageRepository;
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->imageRepository = new ImageRepository();
+    }
 
     public function search(){
         $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
@@ -40,7 +45,7 @@ class ImageController extends AppController
     public function categories()
     {
 
-        $this->render('categories', ['images' =>$images]);
+        $this->render('categories');
 
     }
 
@@ -49,12 +54,6 @@ class ImageController extends AppController
         $image = $this->imageRepository->getImage($id);
         $this->render('image', ['image' =>$image]);
 
-    }
-
-    public function __construct()
-    {
-        parent::__construct();
-        $this->imageRepository = new ImageRepository();
     }
 
     public function addImage()
@@ -72,7 +71,7 @@ class ImageController extends AppController
             $this->imageRepository->addImage($image);
 
             return $this->render('image',  [
-                'images' => $this->imageRepository->getAllImages(),
+                'image' => $this->imageRepository->getAllImages(),
                 'messages' => $this->messages, 'image' => $image]);
         }
 

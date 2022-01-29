@@ -10,12 +10,6 @@ class DefaultController extends AppController {
 
     }
 
-    public function signUp() 
-    {
-        $this->render('signUp');
-
-    }
-
     public function mainPage() 
     {
         $this->render('mainPage');
@@ -24,16 +18,6 @@ class DefaultController extends AppController {
 
 
 
-    public function articles() 
-    {
-        $this->render('articles');
-
-    }
-    public function articleSingle()
-    {
-        $this->render('articlesSingle');
-
-    }
     public function profile()
     {
         $this->render('profile');
@@ -45,11 +29,6 @@ class DefaultController extends AppController {
 
     }
 
-    public function addImage()
-    {
-        $this->render('addImage');
-
-    }
 
 
 }

@@ -5,24 +5,39 @@ class User
 
     private $email;
     private $password;
-    private $name;
-    private $surname;
+    private $username;
+    private $id;
+
+
 
     public function __construct(
-        string $email,
-        string $password,
-        string $name,
-        string $surname
+        $id,
+        $email,
+        $password,
+        $username
+
     )
+
     {
+        $this->id = $id;
         $this->email = $email;
         $this->password = $password;
-        $this->name = $name;
-        $this->surname = $surname;
+        $this->username = $username;
     }
 
 
-    public function getEmail(): string
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setId(string $id)
+    {
+        $this->id = $id;
+    }
+
+
+    public function getEmail()
     {
         return $this->email;
     }
@@ -34,7 +49,7 @@ class User
     }
 
 
-    public function getPassword(): string
+    public function getPassword()
     {
         return $this->password;
     }
@@ -46,27 +61,19 @@ class User
     }
 
 
-    public function getName(): string
+    public function getUsername()
     {
-        return $this->name;
+        return $this->username;
     }
 
 
-    public function setName(string $name)
+    public function setUsername(string $username)
     {
-        $this->name = $name;
+        $this->username = $username;
     }
 
 
-    public function getSurname(): string
-    {
-        return $this->surname;
-    }
 
 
-    public function setSurname(string $surname)
-    {
-        $this->surname = $surname;
-    }
 
 }

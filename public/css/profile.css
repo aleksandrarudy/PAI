@@ -57,6 +57,32 @@ a.edit-profile-button:hover{
     border: 1px solid rgba(255, 255, 255, 0);
 }
 
+button.logout-button {
+    display: block;
+    background: white;
+    border-radius: 25px;
+    width: 120px;
+    height: 35px;
+    border: 1px solid rgba(72, 72, 72, 0.73);
+    outline: none;
+    text-align: center;
+    font: normal normal normal 15px/32px Segoe UI;
+    letter-spacing: 0px;
+    color: #484848;
+    text-decoration: none;
+    margin: 0 2em
+}
+
+button.logout-button:hover{
+    background: rgba(72, 72, 72, 0.59);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.logout{
+    grid-column: 8/9;
+}
+
 .user-name-biogram{
     width: 20vw;
     grid-column: 5/7;
@@ -64,8 +90,10 @@ a.edit-profile-button:hover{
 }
 
 .edit-button{
-    grid-column: 8/9;
+    grid-column: 7/8;
+    height: 6vh;
 }
+
 
 h2.user-name {
     text-align: left;
@@ -123,7 +151,7 @@ a.feed-button:hover {
     grid-row: 1/2;
 }
 
-.saved-posts{
+.add-article{
     grid-column: 10/12;
     grid-row: 1/2;
 }

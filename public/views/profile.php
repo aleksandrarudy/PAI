@@ -40,16 +40,21 @@
             <div class="edit-button">
                 <a href="editProfile" class="edit-profile-button">Edit profile</a>
             </div>
+            <form class="logout" action="logout" method="POST">
+                <button type="submit" class="logout-button">Logout</button>
+            </form>
         </div>
         <div class="profile-feed">
             <div class="add-post">
                 <a href="addImage" class="feed-button">ADD POST</a>
             </div>
+
             <div class="your-posts">
                 <a href="categories" class="feed-button">YOUR POSTS</a>
             </div>
-            <div class="saved-posts">
-                <a href="categories" class="feed-button">SAVED POSTS</a>
+
+            <div class="add-article">
+                <a href="addArticle" class="feed-button">ADD ARTICLE</a>
             </div>
 
         </div>

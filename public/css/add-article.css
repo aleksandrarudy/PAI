@@ -1,0 +1,60 @@
+.add-article-page .add-article-container{
+    display: grid;
+    grid-template-rows: 10% 10% 50% 30%;
+    grid-template-columns: repeat(10, 10%);
+    width: 100%;
+    height: 85vh;
+}
+
+.title{
+    grid-row: 1/2;
+    grid-column: 3/7;
+    width: 40vw;
+
+}
+
+.article-content{
+    grid-row: 2/3;
+    grid-column: 3/7;
+}
+
+.add-article-button{
+    grid-column: 8/9;
+}
+
+.article-title{
+    background: white;
+    border-radius: 50px;
+    width: 30vw;
+    height: 4vh;
+    border: 1px solid #707070;
+    padding-left: 1em;
+    margin: 0.5em;
+}
+
+textarea.content{
+    background: white;
+    border-radius: 25px;
+    border: 1px solid #707070;
+    padding: 1em;
+    width: 60vw;
+    font-family: "Segoe UI";
+
+}
+
+button.add-article-submit {
+    border-radius: 25px;
+    border: none;
+    background: transparent linear-gradient(101deg, #f9464948 0%, hsla(348, 93%, 62%, 0.233) 30%, #f63fbf48 66%, #6c7dff3d 100%) 0% 0% no-repeat padding-box;
+    width: 10vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0.5em;
+}
+button.add-article-submit:hover{
+    background: transparent linear-gradient(101deg, #f94649 0%, hsl(348, 93%, 62%) 30%, #f63fbf 66%, #6c7dff 100%) 0% 0% no-repeat padding-box;
+    color: #ffffff;
+}

@@ -32,7 +32,7 @@ body{
 }
 
 
-.atricle-content>a{
+a.content{
     grid-column: 3/9;
     grid-row: 2/3;
     font-family: Segoe UI;

@@ -33,106 +33,14 @@
             </div>  
             
             <div class="article">
+                <?php foreach($articles as $article): ?>
               <div id="article-1">
                 <img src="public/img/articles/horizontal-1.jpg">
                 <div>
-                  <h2>Title</h2>
-                  <p class="description">description</p>
-                  <div class="social-section">
-                    <i class="fas fa-heart"></i>
-                  </div>
+                  <h2><?= $article->getTitle() ?></h2>
                 </div>
               </div>
-              <div id="article-2">
-                <img src="public/img/articles/horizontal-2.jpg">
-                <div>
-                  <h2>Title</h2>
-                  <p class="description">description</p>
-                  <div class="social-section">
-                    <i class="fas fa-heart"></i>
-                  </div>
-                </div>
-              </div>
-              <div id="article-3">
-                <img src="public/img/articles/horizontal-3.jpg">
-                <div>
-                  <h2>Title</h2>
-                  <p class="description">description</p>
-                  <div class="social-section">
-                    <i class="fas fa-heart"></i>
-                  </div>
-                </div>
-              </div>
-              <div id="article-4">
-                <img src="public/img/articles/horizontal-4.jpg">
-                <div>
-                  <h2>Title</h2>
-                  <p class="description">description</p>
-                  <div class="social-section">
-                    <i class="fas fa-heart"></i>
-                  </div>
-                </div>
-              </div>
-              <div id="article-5">
-                <img src="public/img/articles/horizontal-5.jpg">
-                <div>
-                  <h2>Title</h2>
-                  <p class="description">description</p>
-                  <div class="social-section">
-                    <i class="fas fa-heart"></i>
-                  </div>
-                </div>
-              </div>
-              <div id="article-6">
-                <img src="public/img/articles/horizontal-6.jpg">
-                <div>
-                  <h2>Title</h2>
-                  <p class="description">description</p>
-                  <div class="social-section">
-                    <i class="fas fa-heart"></i>
-                  </div>
-                </div>
-              </div>
-              <div id="article-7">
-                <img src="public/img/articles/horizontal-6.jpg">
-                <div>
-                  <h2>Title</h2>
-                  <p class="description">description</p>
-                  <div class="social-section">
-                    <i class="fas fa-heart"></i>
-                  </div>
-                </div>
-              </div>
-              <div id="article-8">
-                <img src="public/img/articles/horizontal-6.jpg">
-                <div>
-                  <h2>Title</h2>
-                  <p class="description">description</p>
-                  <div class="social-section">
-                    <i class="fas fa-heart"></i>
-                  </div>
-                </div>
-              </div>
-              <div id="article-9">
-                <img src="public/img/articles/horizontal-6.jpg">
-                <div>
-                  <h2>Title</h2>
-                  <p class="description">description</p>
-                  <div class="social-section">
-                    <i class="fas fa-heart"></i>
-                  </div>
-                </div>
-              </div>
-              <div id="article-10">
-                <img src="public/img/articles/horizontal-6.jpg">
-                <div>
-                  <h2>Title</h2>
-                  <p class="description">description</p>
-                  <div class="social-section">
-                    <i class="fas fa-heart"></i>
-                  </div>
-                </div>
-              </div>
+                <?php endforeach; ?>
             </div>
 
     </div>

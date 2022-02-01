@@ -21,7 +21,10 @@ class ArticleRepository extends Repository
 
         return new Article(
             $article['article_title'],
-            $article['article_content']
+            $article['article_content'],
+            $article['article_picture'],
+            $article['article_id']
+
 
         );
     }
@@ -30,14 +33,15 @@ class ArticleRepository extends Repository
     {
         $date = new DateTime();
         $stmt = $this->database->connect()->prepare('
-            INSERT INTO articles (article_title, article_content, article_post_date) VALUES (?, ?, ?)
+            INSERT INTO articles (article_title, article_content, article_post_date, article_picture) VALUES (?, ?, ?, ?)
                                                                                                         
         ');
 
         $stmt->execute([
             $article->getTitle(),
             $article->getContent(),
-            $date->format('Y-m-d')
+            $date->format('Y-m-d'),
+            $article->getArticlePicture()
         ]);
 
     }
@@ -54,7 +58,9 @@ class ArticleRepository extends Repository
         foreach ($articles as $article) {
             $result[] = new Article(
                 $article['article_title'],
-                $article['article_content']
+                $article['article_content'],
+                $article['article_picture'],
+                $article['article_id']
 
             );
         }

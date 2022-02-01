@@ -89,7 +89,7 @@ div.data>a{
     color: #707070;
     font: normal normal normal 15px/32px Segoe UI;
 }
-a.delete-button{
+div.data>button.delete-button{
     border: 1px solid rgba(72, 72, 72, 0.73);
     border-radius: 25px;
     width: 150px;
@@ -98,13 +98,13 @@ a.delete-button{
     justify-content: center;
     align-items: center;
 }
-a.delete-button:hover{
+div.data>button.delete-button:hover{
     background: rgba(72, 72, 72, 0.59);
     color: white;
     border: 1px solid rgba(255, 255, 255, 0);
 }
 
-a.save-button{
+div.data>button.save-button{
     border-radius: 25px;
     background: transparent linear-gradient(180deg, rgba(249, 70, 73, 0.2) 0%, rgba(248, 68, 104, 0.2) 18%, rgba(246, 63, 192, 0.2) 53%, rgba(108, 126, 255, 0.2) 100%) 0% 0% no-repeat padding-box;
     width: 140px;
@@ -114,7 +114,35 @@ a.save-button{
     align-items: center;
     text-decoration: none;
 }
-a.save-button:hover{
+div.data>button.save-button:hover{
     background:  transparent linear-gradient(180deg, rgba(249, 70, 73, 0.9) 0%, rgba(248, 68, 104, 0.9) 18%, rgba(246, 63, 192, 0.9) 53%, rgba(108, 126, 255, 0.9) 100%) 0% 0% no-repeat padding-box;
     color: #ffffff;
+}
+
+div.biogram>.user-profile-pic{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+div.biogram.user-profile-pic + label {
+
+    display: block;
+    border: none;
+    outline: none;
+    text-align: center;
+    font: normal normal  14px/30px Segoe UI;
+    letter-spacing: 0px;
+    color: black;
+    justify-self: center;
+    text-decoration: none;
+    border-radius: 25px;
+    background: transparent linear-gradient(101deg, #f9464948 0%, hsla(348, 93%, 62%, 0.233) 30%, #f63fbf48 66%, #6c7dff3d 100%) 0% 0% no-repeat padding-box;
+    width: 9vw;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
 }

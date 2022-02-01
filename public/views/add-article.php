@@ -29,7 +29,7 @@
         </a>
     </header>
     <section class="add-article-page">
-        <form action="addArticle" method="POST" class="add-article-container">
+        <form action="addArticle" method="POST" ENCTYPE="multipart/form-data"  class="add-article-container">
             <?php if(isset($messages)){
                 foreach($messages as $message) {
                     echo $message;
@@ -39,6 +39,10 @@
             <div class="title">
                 <a class="title">TITLE</a>
                 <input class="article-title" name="title" type="text" placeholder="Title">
+            </div>
+            <div class="add-poster">
+                <input type="file" name="a-file" id="a-file" class="add-poster-input">
+                <label for="a-file">Choose a file</label>
             </div>
             <div class="article-content">
                 <textarea class="content" rows="20" name="content" placeholder="content..."></textarea>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/public/css/articles.css">
     <link rel="stylesheet" type="text/css" href="/public/css/image.css">
     <script src="https://kit.fontawesome.com/c7d1b0ffc1.js" crossorigin="anonymous"></script>
+
     <title>IMAGE</title>
 </head>
 <body>
@@ -46,7 +47,6 @@
             </div>
             <div class="image-description">
                 <p class="description"><?= $image->getDescription() ?></p>
-
             </div>
 
             <div class="image-specification">

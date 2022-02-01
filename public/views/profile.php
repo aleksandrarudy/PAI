@@ -28,17 +28,20 @@
                 <i class="fas fa-user"></i>
             </a>
         </header>
+    <?php
+    if (isset($profile) && isset($user)) :?>
+
         <div class="profile">
             <a href="profile" class="profile-picture">
-                <img src="public/img/uploads/vladimir-kozhevnikov-VwZuLjeTqqo-unsplash.jpg">
+                <img src="/public/img/uploads/<?= $profile->getProfilePicture() ?>">
             </a>
             <div class="user-name-biogram">
-                <h2 class="user-name">User-name</h2>
-                <p class="first-sur-name">User Name</p>
-                <p class="biogram">biogram biogram <br> biogram </p>
+                <h2 class="user-name"><?= $user->getUsername() ?></h2>
+                <p class="first-sur-name"><?= $profile->getFirstname() ?>  <?= $profile->getSurname() ?></p>
+                <p class="biogram"><?= $profile->getBiogram() ?></p>
             </div>
             <div class="edit-button">
-                <a href="editProfile" class="edit-profile-button">Edit profile</a>
+                <a href="addUserDetails" class="edit-profile-button">Edit profile</a>
             </div>
             <form class="logout" action="logout" method="POST">
                 <button type="submit" class="logout-button">Logout</button>
@@ -58,6 +61,7 @@
             </div>
 
         </div>
+    <?php endif; ?>
 
 </div>
 

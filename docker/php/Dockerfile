@@ -28,6 +28,7 @@ RUN apk add --no-cache --virtual .build-deps $BUILD_DEPS \
     && apk del .build-deps
 
 RUN apk add --no-cache --virtual .run-deps $RUN_DEPS
+RUN echo "upload_max_filesize = 10M;" >> /usr/local/etc/php/conf.d/uploads.ini
 
 # Copy the application code
 COPY . /app

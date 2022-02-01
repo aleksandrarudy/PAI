@@ -31,44 +31,55 @@
             </a>
         </header>
 
-        <div class="edit-profile">
+        <form class="edit-profile" action="addUserDetails" method="POST" ENCTYPE="multipart/form-data">
+            <?php if(isset($messages)){
+                foreach($messages as $message) {
+                    echo $message;
+                }
+            }
+            ?>
             <div class="picture-and-biogram">
                 <div class="profile-picture">
                     <img src="public/img/uploads/vladimir-kozhevnikov-VwZuLjeTqqo-unsplash.jpg">
                 </div>
                 <div class="biogram">
                     <h2 class="user-name">User-name</h2>
-                    <a class="edit-user-picture">edit profile picture</a>
+                    <input type="file" name="p-file" id="p-file" class="user-profile-pic">
+                    <label for="p-file">Edit profile picture</label>
                 </div>
             </div>
             <div class="edit-profile-data">
                 <div class="data">
                     <a>User name</a>
-                    <input class="data-input" name="User name" type="text">
+                    <input class="data-input" name="username" type="text">
                 </div>
                 <div class="data">
-                    <a>First name and Surname</a>
-                    <input class="data-input" name="First name and Surname" type="text">
+                    <a>Firstname</a>
+                    <input class="data-input" name="firstname" type="text">
+                </div>
+                <div class="data">
+                    <a>Surname</a>
+                    <input class="data-input" name="surname" type="text">
                 </div>
                 <div class="data">
                     <a>Biogram</a>
-                    <input class="data-input" name="Biogram" type="text">
+                    <textarea class="data-input" rows='2' name="biogram" type="text"></textarea>
                 </div>
                 <div class="data">
                     <a>Email</a>
-                    <input class="data-input" name="Email" type="text">
+                    <input class="data-input" name="email" type="text">
                 </div>
                 <div class="data">
                     <a>Change password</a>
-                    <input class="data-input" name="Change password" type="password">
+                    <input class="data-input" name="change_password" type="password">
                 </div>
                 <div class="data">
-                    <a class="delete-button">Delete account</a>
-                    <a href="profile" class="save-button">Save changes</a>
+                    <button type="submit" class="delete-button">Delete account</button>
+                    <button type="submit" class="save-button">Save changes</button>
                 </div>
 
             </div>
-        </div>
+        </form>
 
 
 </div>

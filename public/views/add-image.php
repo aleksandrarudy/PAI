@@ -41,7 +41,7 @@
                 <div class="added-image" id="added-image">
                 </div>
                 <div class="add-image">
-                    <input type="file" name="file" id="file" class="add-image-input" accept="image/*">
+                    <input type="file" name="file" id="file" class="add-image-input">
                     <label for="file">Choose a file</label>
                 </div>
             </div>
@@ -50,17 +50,16 @@
                     <textarea class="hashtags-and-description" rows="5" name="description" placeholder="Description..."></textarea>
                 </div>
                 <div class="category-list">
-                    <ol>
-                        <li><a >Category</a>
-                            <ul>
-                                <li><a >Animal</a></li>
-                                <li><a >People</a></li>
-                                <li><a >Monochrome</a></li>
-                                <li><a >Landscape</a></li>
-                                <li><a >Portrait</a></li>
-                            </ul>
-                        </li>
-                    </ol>
+                        <select class="list-button" name="Category" id="category">
+                                <option name="list-element" class="list-element" value="">Category</option>
+                                <option name="list-element" class="list-element" value="1">Animals</option>
+                                <option name="list-element" class="list-element" value="2">People</option>
+                                <option name="list-element" class="list-element" value="3">Monochrome</option>
+                                <option name="list-element" class="list-element" value="4">Landscape</option>
+                                <option name="list-element" class="list-element" value="6">Street Photograpy</option>
+                                <option name="list-element" class="list-element" value="7">Portrait</option>
+                                <option name="list-element" class="list-element" value="8">Architecture</option>
+                        </select>
                 </div>
                 <div class="image-specification">
                     <img src="public/img/icons/camera-icon.svg">

@@ -26,8 +26,10 @@
         <i class="fas fa-user"></i>
       </a>
     </header>
-
+      <?php if (isset($article)) : ?>
     <div class="atricle-title-background">
+
+        <img src="/public/img/uploads/<?= $article->getArticlePicture() ?>" class="poster">
 
         <h1><?= $article->getTitle() ?></h1>
 
@@ -36,7 +38,7 @@
         <a class="content"><?= $article->getContent() ?></a>
 
     </div>
-
+      <?php endif; ?>
 
   </div>
 

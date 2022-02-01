@@ -47,7 +47,6 @@ class ImageRepository extends Repository
 
         $userId = 1;
 
-
         $stmt->execute([
             $userId,
             $image->getCategory(),
@@ -61,9 +60,7 @@ class ImageRepository extends Repository
             $image->getIso(),
             $image->getLight(),
             $date->format('Y-m-d'),
-            $image->getDescription(),
-
-
+            $image->getDescription()
         ]);
 
     }
@@ -101,7 +98,8 @@ class ImageRepository extends Repository
         $searchString = '%' . strtolower($searchString) . '%';
 
         $stmt = $this->database->connect()->prepare('
-      SELECT image FROM image WHERE LOWER(description) LIKE :search
+      SELECT image FROM image inner join image_categories on image.id_image_categories = image_categories.id_image_categories WHERE 
+        LOWER(description) LIKE :search or LOWER(image_category_name) like :search
            ');
         $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
         $stmt->execute();

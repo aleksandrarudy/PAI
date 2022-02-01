@@ -8,8 +8,8 @@ require_once __DIR__.'/../repository/UserRepository.php';
 
 class ImageController extends AppController
 {
-    const MAX_FILE_SIZE = 1024*(1024*4);
-    const SUPPORTED_TYPES = ['image/png', 'image/jpeg'];
+    const MAX_FILE_SIZE = 5242880;
+    const SUPPORTED_TYPES = ['image/png', 'image/jpeg', 'image/jpg'];
     const UPLOAD_DIRECTORY = '/../public/img/uploads/';
 
     private $messages = [];
@@ -44,9 +44,7 @@ class ImageController extends AppController
 
     public function categories()
     {
-
         $this->render('categories');
-
     }
 
     public function image($id)
@@ -65,9 +63,10 @@ class ImageController extends AppController
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
             );
 
+
             $image = new Image($_POST['camera'], $_POST['lens'], $_POST['flash'], $_POST['aperture'],
                 $_POST['exposure'], $_POST['focus'], $_POST['iso'], $_POST['light'], $_POST['description'],
-                $_FILES['file']['name']);
+                $_FILES['file']['name'], $_POST['Category']);
             $this->imageRepository->addImage($image);
 
             return $this->render('image',  [

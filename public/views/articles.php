@@ -34,12 +34,12 @@
             
             <div class="article">
                 <?php foreach($articles as $article): ?>
-              <div id="article-1">
-                <img src="public/img/articles/horizontal-1.jpg">
+              <a class="singleArt" id="article-1" href="articleSingle/<?= $article->getIdArticle() ?>">
+                <img src="public/img/uploads/<?= $article->getArticlePicture() ?>">
                 <div>
-                  <h2><?= $article->getTitle() ?></h2>
+                  <h2 class="art-title"><?= $article->getTitle() ?></h2>
                 </div>
-              </div>
+              </a>
                 <?php endforeach; ?>
             </div>
 

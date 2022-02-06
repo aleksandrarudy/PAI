@@ -34,7 +34,7 @@ class ProfileController extends AppController
     }
 
     public function addUserDetails(){
-
+        $user = $this->userRepository->getUserById($this->id);
         if ($this->isPost() && is_uploaded_file($_FILES['p-file']['tmp_name']) && $this->validate($_FILES['p-file']))
         {
             move_uploaded_file(
@@ -43,7 +43,7 @@ class ProfileController extends AppController
             );
 
             $profile = new Profile($_POST['firstname'], $_POST['surname'],$_POST['biogram'],$_FILES['p-file']['name']);
-            $this->profileRepository->addUserDetails($profile, $this->idProfileDetails);
+            $this->profileRepository->addUserDetails($profile, $user ,$this->idProfileDetails);
 
             return $this->profile();
         }

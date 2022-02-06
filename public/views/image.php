@@ -29,7 +29,8 @@
             <i class="fas fa-user"></i>
         </a>
     </header>
-    <?php if (isset($image)) : ?>
+    <?php
+    if (isset($image)) : ?>
     <div class="im-container">
         <div class="image-container">
             <div class="image">
@@ -38,11 +39,11 @@
         </div>
         <div class="information">
             <div class="author">
-                <a href="/profile" class="profile-picture">
-                    <img src="/public/img/uploads/vladimir-kozhevnikov-VwZuLjeTqqo-unsplash.jpg">
+                <a class="profile-picture">
+                    <img src="/public/img/uploads/<?= $userPicture->getProfilePicture() ?>">
                 </a>
-                <a href="/profile" class="user-name">
-                    <h2 class="user-name">User-name</h2>
+                <a class="user-name">
+                    <h2 class="user-name"><?= $userName->getUsername() ?></h2>
                 </a>
             </div>
             <div class="image-description">

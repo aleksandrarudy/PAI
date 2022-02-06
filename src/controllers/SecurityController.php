@@ -81,6 +81,7 @@ class SecurityController extends AppController
         if(isset($_COOKIE['user'])){
             setcookie('user', '', time()-(86400*30),'/');
             setcookie('id', '', time()-(86400*30),'/');
+            setcookie('profileDetails', '', time()-(86400*30),'/');
         }
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/login");

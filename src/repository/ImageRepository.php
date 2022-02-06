@@ -5,11 +5,13 @@ require_once __DIR__.'/../models/Image.php';
 
 class ImageRepository extends Repository
 {
-    public function getImage($id): ?Image
+    public function getImage($id): ?array
     {
-        $stmt = $this->database->connect()->prepare('
-            SELECT * FROM image WHERE id_image = :id
-        ');
+        $stmt = $this->database->connect()->prepare('SELECT *
+from image a
+         inner join "user" b on b.id_user = a.id_user
+         inner join "user_profile_details" c on c.id_user_profile_details = b.id_user_profile_details
+WHERE id_image=:id');
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
 
@@ -19,7 +21,7 @@ class ImageRepository extends Repository
             return null;
         }
 
-        return new Image(
+        $newimage = new Image(
             $image['camera_name'],
             $image['lens_name'],
             $image['flash'],
@@ -34,9 +36,26 @@ class ImageRepository extends Repository
             $image['id_image']
 
         );
+
+        $newuser = new User(
+            $image['id_user'],
+            $image['email'],
+            $image['password'],
+            $image['user_name']
+        );
+
+        $userpic =  new Profile(
+            $image['firstname'],
+            $image['surname'],
+            $image['biogram'],
+            $image['profile_picture']
+        );
+
+        return array($newimage, $newuser, $userpic);
     }
 
-    public function addImage(Image $image): void
+
+    public function addImage(Image $image, $id_user): void
     {
         $date = new DateTime();
         $stmt = $this->database->connect()->prepare('
@@ -45,10 +64,9 @@ class ImageRepository extends Repository
                                                                                                         
         ');
 
-        $userId = 1;
 
         $stmt->execute([
-            $userId,
+            $id_user,
             $image->getCategory(),
             $image->getPicture(),
             $image->getCamera(),

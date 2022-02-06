@@ -33,28 +33,26 @@ body{
     border-radius: 100%;
     width: 200px;
     height: 200px;
+    object-fit: cover;
 }
 
 
-a.edit-profile-button
-{
-    display: block;
-    background: white;
+
+a.edit-profile-button{
     border-radius: 25px;
+    border: none;
+    background: transparent linear-gradient(101deg, rgba(249, 70, 73, 0.3) 0%, rgba(248, 68, 104, 0.3) 30%, rgba(246, 63, 192, 0.3) 66%, rgba(108, 126, 255, 0.3) 100%) 0% 0% no-repeat padding-box;
     width: 120px;
     height: 35px;
-    border: 1px solid rgba(72, 72, 72, 0.73);
-    outline: none;
-    text-align: center;
-    font: normal normal normal 15px/32px Segoe UI;
-    letter-spacing: 0px;
-    color: #484848;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
+    color: black;
 }
 a.edit-profile-button:hover{
-    background: rgba(72, 72, 72, 0.59);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0);
+    background: transparent linear-gradient(101deg, rgba(249, 70, 73, 0.9) 0%, rgba(248, 68, 104, 0.9) 30%, rgba(246, 63, 192, 0.9) 66%, rgba(108, 126, 255, 0.9) 100%) 0% 0% no-repeat padding-box;
+    color: #ffffff;
 }
 
 button.logout-button {

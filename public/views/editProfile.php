@@ -38,13 +38,14 @@
                 }
             }
             ?>
+
             <div class="picture-and-biogram">
-                <div class="profile-picture">
-                    <img src="public/img/uploads/vladimir-kozhevnikov-VwZuLjeTqqo-unsplash.jpg">
-                </div>
+                <a class="profile-picture">
+                    <img src="public/img/uploads/blue-1.jpg">
+                </a>
                 <div class="biogram">
-                    <h2 class="user-name">User-name</h2>
-                    <input type="file" name="p-file" id="p-file" class="user-profile-pic">
+                    <h2 class="user-name">username</h2>
+                    <input class="user-profile-pic" type="file" name="p-file" id="p-file">
                     <label for="p-file">Edit profile picture</label>
                 </div>
             </div>

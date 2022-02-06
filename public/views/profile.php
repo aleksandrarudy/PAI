@@ -13,6 +13,8 @@
 <div class="profile-container">
     <?php include('header.php')?>
     <?php
+    var_dump($profile);
+    var_dump($user);
     if (isset($profile) && isset($user)) :?>
 
         <div class="profile">

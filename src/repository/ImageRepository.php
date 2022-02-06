@@ -62,7 +62,7 @@ WHERE id_image=:id');
         $date = new DateTime();
         $stmt = $this->database->connect()->prepare('
             INSERT INTO image (id_user, id_image_categories, image, camera_name, lens_name, flash,
-                                 aperture, exposure_time, focus_length, iso, light, post_date,description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                                 aperture, exposure_time, focus_length, iso, light, post_date,description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) returning id_image
                                                                                                         
         ');
 

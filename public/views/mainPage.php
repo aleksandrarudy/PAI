@@ -15,7 +15,7 @@
         <div class="main-container">
             <form class="mainpage">
                 <a href="login" class="login-signup-button">login</a>
-                <a href="signUp" class="login-signup-button">sign up</a>
+                <a href="register" class="login-signup-button">sign up</a>
 
             </form> 
         </div>

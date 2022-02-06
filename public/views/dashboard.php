@@ -11,15 +11,20 @@
     <title>PIXAGE</title>
 </head>
 <body>
-    <div class="dashboard-container">
+    <div class="dashboard-container-w-title">
         <?php include('header.php')?>
-            <div class="gallery">
-                <?php foreach($images as $image): ?>
-                      <a class="gallery-item" href="image/<?= $image->getIdImg() ?>">
-                          <img src="public/img/uploads/<?= $image->getPicture() ?>" class="image-item">
-                      </a>
-                <?php endforeach; ?>
-            </div>
+        <div class="category">
+            <a href='/dashboard' class="header">Photos/</a>
+            <a href='/articles' class="header2">Articles/</a>
+
+        </div>
+        <div class="gallery_categories">
+            <?php foreach($images as $image): ?>
+                <a class="gallery-item" href="image/<?= $image->getIdImg() ?>">
+                    <img src="public/img/uploads/<?= $image->getPicture() ?>" class="image-item">
+                </a>
+            <?php endforeach; ?>
+        </div>
 
     </div>
     

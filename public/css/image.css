@@ -42,8 +42,9 @@ body {
 }
 
 img.image-view{
-    width: auto;
+    max-width: 55vw;
     height: 100%;
+    object-fit: cover;
 }
 
 
@@ -72,11 +73,12 @@ img.image-view{
     margin: 1em;
 }
 
-.profile-picture img
+.profile-picture>img
 {
     border-radius: 100%;
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 h2.user-name {
@@ -270,7 +272,7 @@ select.list-button {
 
 }
 
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 1350px){
     .im-container{
         grid-template-rows: 50% 50%;
         height: 100%;

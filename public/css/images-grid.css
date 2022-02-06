@@ -1,7 +1,7 @@
 body {
     font-family: "Segoe UI";
 }
-.dashboard-container, .dashboard-container-w-title{
+.dashboard-container-w-title{
     display: grid;
     align-items: center;
     justify-content: flex-start;
@@ -19,14 +19,27 @@ body {
     height: 5vh;
 }
 
-p.header {
+div>a.header {
     margin: 0;
     font-size: 20px;
     font-style: normal;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: bold;
     color: #484848;
-    grid-column: 2/5;
+    grid-column: 2/4;
+    text-decoration: none;
+
+}
+
+div>a.header2 {
+    margin: 0;
+    font-size: 20px;
+    font-style: normal;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: bold;
+    color: #484848;
+    grid-column: 4/8;
+    text-decoration: none;
 
 }
 

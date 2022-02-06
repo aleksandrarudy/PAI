@@ -60,7 +60,6 @@ class ImageController extends AppController
     {
 
         $image = $this->imageRepository->getImage($id);
-
         $userName = $this->userRepository->getUserById($id);
         $userPicture = $this->profileRepository->getUserDetails($id);
         $this->render('image', ['image' =>$image[0], 'userName'=>$image[1], 'userPicture'=>$image[2]]);
@@ -85,9 +84,10 @@ class ImageController extends AppController
 
             $imageid = $this->imageRepository->addImage($image, $this->id_user);
 
-            $this->getImage($imageid);
+            $this->image($imageid);
         }
 
+        else
         return $this->render('add-image', ['messages' => $this->messages]);
 
 

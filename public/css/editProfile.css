@@ -90,20 +90,6 @@ div.data>a{
     color: #707070;
     font: normal normal normal 15px/32px Segoe UI;
 }
-div.data>button.delete-button{
-    border: 1px solid rgba(72, 72, 72, 0.73);
-    border-radius: 25px;
-    width: 150px;
-    height: 33px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-div.data>button.delete-button:hover{
-    background: rgba(72, 72, 72, 0.59);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0);
-}
 
 div.data>button.save-button{
     border-radius: 25px;

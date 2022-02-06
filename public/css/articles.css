@@ -52,7 +52,7 @@ a.singleArt {
     flex-direction: column;
     justify-content: space-between;
 }
-h2.art-title{
+h1.art-title{
     text-decoration: none;
 
 }

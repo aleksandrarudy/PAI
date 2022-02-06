@@ -42,9 +42,11 @@
                                 <option name="list-element" class="list-element" value="2">People</option>
                                 <option name="list-element" class="list-element" value="3">Monochrome</option>
                                 <option name="list-element" class="list-element" value="4">Landscape</option>
-                                <option name="list-element" class="list-element" value="6">Street Photograpy</option>
+                                <option name="list-element" class="list-element" value="6">Street Photography</option>
                                 <option name="list-element" class="list-element" value="7">Portrait</option>
                                 <option name="list-element" class="list-element" value="8">Architecture</option>
+                                <option name="list-element" class="list-element" value="9">Macro Photography</option>
+                                <option name="list-element" class="list-element" value="10">Product Photography</option>
                         </select>
                 </div>
                 <div class="image-specification">

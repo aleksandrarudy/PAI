@@ -48,7 +48,6 @@
                     <textarea class="data-input" rows='2' name="biogram" type="text"></textarea>
                 </div>
                 <div class="data">
-                    <button type="submit" class="delete-button">Delete account</button>
                     <button type="submit" class="save-button">Save changes</button>
                 </div>
 

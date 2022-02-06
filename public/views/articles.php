@@ -14,7 +14,7 @@
     <div class="articles-container">
         <?php include('header.php')?>
             <div class="articles">
-              <p class="header">ARTICLES</p>
+              <a class="header">ARTICLES</a>
             </div>  
             
             <div class="article">
@@ -22,7 +22,7 @@
               <a class="singleArt" id="article-1" href="articleSingle/<?= $article->getIdArticle() ?>">
                 <img src="public/img/uploads/<?= $article->getArticlePicture() ?>">
                 <div>
-                  <h2 class="art-title"><?= $article->getTitle() ?></h2>
+                  <h1 class="art-title"><?= $article->getTitle() ?></h1>
                 </div>
               </a>
                 <?php endforeach; ?>

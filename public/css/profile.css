@@ -31,8 +31,8 @@ body{
 .profile-picture img
 {
     border-radius: 100%;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -68,7 +68,6 @@ button.logout-button {
     letter-spacing: 0px;
     color: #484848;
     text-decoration: none;
-    margin: 0 2em
 }
 
 button.logout-button:hover{
@@ -156,4 +155,157 @@ a.feed-button:hover {
 .your-posts{
     grid-column: 12/14;
     grid-row: 1/2;
+}
+
+@media only screen and (max-width: 490px){
+
+    .profile{
+        display: grid;
+        grid-template-columns: repeat(10, 10%);
+        grid-template-rows: repeat(4, 25%);
+
+    }
+
+    .profile-picture
+    {
+        grid-column: 2/4;
+        width: 100px;
+        height: 100px;
+    }
+    .edit-button{
+        grid-column: 8/9;
+        grid-row: 2/3;
+    }
+
+    a.edit-profile-button{
+        width: 100px;
+    }
+    .logout{
+        grid-column: 8/9;
+        grid-row: 1/2;
+    }
+
+    button.logout-button {
+        width: 100px;
+    }
+
+    .profile-feed{
+        grid-template-columns: repeat(20, 5%);
+        grid-template-rows: repeat(20, 5%);
+
+    }
+
+    a.feed-button{
+        width:100px;
+        height: 60px;
+        font: normal normal bold 13px/60px Segoe UI;
+    }
+
+    .add-post{
+        grid-column: 8/12;
+        grid-row: 2/5;
+    }
+
+    .add-article{
+        grid-column: 8/12;
+        grid-row: 8/12;
+    }
+    .your-posts{
+        grid-column: 8/12;
+        grid-row: 15/19;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .profile {
+        display: grid;
+        grid-template-columns: repeat(10, 10%);
+        grid-template-rows: repeat(4, 25%);
+    }
+
+    .edit-button {
+        grid-column: 8/9;
+        grid-row: 2/3;
+    }
+
+    .logout {
+        grid-column: 8/9;
+        grid-row: 1/2;
+    }
+
+}
+
+@media only screen and (max-width: 1090px) {
+    .profile {
+        display: grid;
+        grid-template-columns: repeat(10, 10%);
+        grid-template-rows: repeat(4, 25%);
+    }
+
+    .profile-picture {
+        grid-column: 2/4;
+        width: 150px;
+        height: 150px;
+    }
+
+    .edit-button {
+        grid-column: 8/9;
+        grid-row: 2/3;
+    }
+
+    a.edit-profile-button {
+        width: 100px;
+    }
+
+    .logout {
+        grid-column: 8/9;
+        grid-row: 1/2;
+    }
+
+    button.logout-button {
+        width: 100px;
+    }
+
+    .profile-feed {
+        grid-template-columns: repeat(20, 5%);
+        grid-template-rows: repeat(20, 5%);
+
+    }
+
+    a.feed-button {
+        width: 100px;
+        height: 60px;
+        font: normal normal bold 13px/60px Segoe UI;
+    }
+
+    .add-post {
+        grid-column: 10/14;
+        grid-row: 2/5;
+    }
+
+    .add-article {
+        grid-column: 10/14;
+        grid-row: 8/12;
+    }
+
+    .your-posts {
+        grid-column: 10/14;
+        grid-row: 15/19;
+    }
+
+    h2.user-name {
+        text-align: left;
+        font: normal normal 300 20px/24px Segoe UI;
+    }
+
+    p.first-sur-name {
+        text-align: left;
+        font: normal normal bold 15px/24px Segoe UI;
+        margin: 3em 0 1em 0;
+    }
+
+    p.biogram {
+        text-align: left;
+        font: normal normal 300 15px/24px Segoe UI;
+    }
 }

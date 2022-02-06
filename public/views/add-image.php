@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/header.css">
     <link rel="stylesheet" type="text/css" href="/public/css/articles.css">
     <link rel="stylesheet" type="text/css" href="/public/css/image.css">
     <link rel="stylesheet" type="text/css" href="/public/css/editProfile.css">
@@ -14,21 +14,7 @@
 </head>
 <body>
 <div class="dashboard-container">
-    <header>
-        <a href="dashboard">
-            <img src="public/img/logo-gradient.svg">
-        </a>
-
-        <div class="search-bar">
-
-                <input class="search-input" placeholder="search">
-                <i class="fas fa-search"></i>
-
-        </div>
-        <a href="profile" class="profil">
-            <i class="fas fa-user"></i>
-        </a>
-    </header>
+    <?php include('header.php')?>
     <section class="add-image">
         <form action="addImage" method="POST" ENCTYPE="multipart/form-data" class="im-container">
             <?php if(isset($messages)){

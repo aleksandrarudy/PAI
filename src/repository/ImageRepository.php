@@ -51,11 +51,13 @@ WHERE id_image=:id');
             $image['profile_picture']
         );
 
+
+
         return array($newimage, $newuser, $userpic);
     }
 
 
-    public function addImage(Image $image, $id_user): void
+    public function addImage(Image $image, $id_user)
     {
         $date = new DateTime();
         $stmt = $this->database->connect()->prepare('
@@ -63,7 +65,6 @@ WHERE id_image=:id');
                                  aperture, exposure_time, focus_length, iso, light, post_date,description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                                                                                                         
         ');
-
 
         $stmt->execute([
             $id_user,
@@ -81,6 +82,9 @@ WHERE id_image=:id');
             $image->getDescription()
         ]);
 
+        $imageid = $stmt -> fetchColumn();
+
+        return $imageid;
     }
 
     public function getAllImages(): array{

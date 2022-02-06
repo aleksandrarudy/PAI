@@ -37,19 +37,18 @@ class ProfileRepository extends Repository
 
         $firstname = $profile->getFirstname();
         $surname = $profile->getSurname();
-//        $user_name = $user->getUsername();
         $biogram = $profile->getBiogram();
         $profile_picture = $profile->getProfilePicture();
         $stmt->bindParam(':fn', $firstname, PDO::PARAM_STR);
         $stmt->bindParam(':sn', $surname, PDO::PARAM_STR);
-//        $stmt->bindParam(':un', $user_name, PDO::PARAM_STR);
         $stmt->bindParam(':biogram', $biogram, PDO::PARAM_STR);
         $stmt->bindParam(':pp', $profile_picture, PDO::PARAM_STR);
         $stmt->bindParam(':idU', $id_user_profile_details, PDO::PARAM_INT);
         $stmt->execute();
-//        var_dump($user_name);
 
     }
+
+
 
     public function getUserProfileIdById($id){
         $stmt = $this->database->connect()->prepare('

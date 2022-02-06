@@ -1,3 +1,15 @@
+body {
+    font-family: "Segoe UI";
+}
+.dashboard-container, .dashboard-container-w-title{
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    grid-template-rows: 15% min-content;
+}
+
+
 .category {
     display: grid;
     grid-template-columns: repeat(20, 5%);
@@ -28,17 +40,22 @@ img.image-item{
     border-radius: 50px;
 }
 
-.gallery{
+.gallery, .gallery_categories{
     column-count: 5;
     width: 100vw;
     column-gap: 5px;
 
 }
 
+@media only screen and (max-width: 1000px){
+    .gallery, .gallery_categories {
+        column-count: 3;
+    }
 
-.gallery_categories {
-    column-count: 5;
-    width: 100vw;
-    column-gap: 5px;
 }
 
+@media only screen and (max-width: 600px){
+    .gallery, .gallery_categories {
+        column-count: 1;
+    }
+}

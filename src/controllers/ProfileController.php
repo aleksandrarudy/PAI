@@ -34,6 +34,7 @@ class ProfileController extends AppController
     }
 
     public function addUserDetails(){
+        $profile = $this->profileRepository->getUserDetails($this->id);
         $user = $this->userRepository->getUserById($this->id);
         if ($this->isPost() && is_uploaded_file($_FILES['p-file']['tmp_name']) && $this->validate($_FILES['p-file']))
         {
@@ -47,7 +48,7 @@ class ProfileController extends AppController
 
             return $this->profile();
         }
-        return $this->render('editProfile',['messages'=>$this->messages]);
+        return $this->render('editProfile',['messages'=>$this->messages, 'profile'=>$profile, 'user'=>$user,]);
     }
 
     private function validate(array $file): bool

@@ -51,7 +51,9 @@ class ImageController extends AppController
 
     public function categories()
     {
-        $this->render('categories');
+        $images = $this->imageRepository->getAllImages();
+        $this->render('categories', ['images' =>$images]);
+
     }
 
     public function image($id)
@@ -80,11 +82,10 @@ class ImageController extends AppController
             $image = new Image($_POST['camera'], $_POST['lens'], $_POST['flash'], $_POST['aperture'],
                 $_POST['exposure'], $_POST['focus'], $_POST['iso'], $_POST['light'], $_POST['description'],
                 $_FILES['file']['name'], $_POST['Category']);
-            $this->imageRepository->addImage($image, $this->id_user);
 
-            return $this->render('image',  [
-                'image' => $this->imageRepository->getAllImages(),
-                'messages' => $this->messages, 'image' => $image]);
+            $imageid = $this->imageRepository->addImage($image, $this->id_user);
+
+            $this->getImage($imageid);
         }
 
         return $this->render('add-image', ['messages' => $this->messages]);

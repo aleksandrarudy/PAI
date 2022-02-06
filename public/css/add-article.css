@@ -10,22 +10,11 @@
     grid-row: 1/2;
     grid-column: 3/7;
     width: 40vw;
-
-}
-
-.add-poster{
-    grid-row: 1/2;
-    grid-column: 7/8;
-    width: 10vw;
 }
 
 .article-content{
     grid-row: 2/3;
     grid-column: 3/7;
-}
-
-.add-article-button{
-    grid-column: 8/9;
 }
 
 .article-title{
@@ -47,25 +36,34 @@ textarea.content{
     font-family: "Segoe UI";
 
 }
+.add-article-button{
+    grid-column: 8/9;
+    width: 9vw;
+    height: 5vh;
+}
 
 button.add-article-submit {
     border-radius: 25px;
     border: none;
     background: transparent linear-gradient(101deg, #f9464948 0%, hsla(348, 93%, 62%, 0.233) 30%, #f63fbf48 66%, #6c7dff3d 100%) 0% 0% no-repeat padding-box;
-    width: 9vw;
-    height: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin: 0.5em;
+    width: 100%;
+    height: 100%;
 }
 button.add-article-submit:hover{
     background: transparent linear-gradient(101deg, #f94649 0%, hsl(348, 93%, 62%) 30%, #f63fbf 66%, #6c7dff 100%) 0% 0% no-repeat padding-box;
     color: #ffffff;
 }
 
-
+.add-poster{
+    grid-row: 1/2;
+    grid-column: 7/8;
+    width: 9vw;
+    height: 5vh;
+}
 .add-poster-input{
     width: 0.1px;
     height: 0.1px;
@@ -73,10 +71,10 @@ button.add-article-submit:hover{
     overflow: hidden;
     position: absolute;
     z-index: -1;
+
 }
 
 .add-poster-input + label {
-
     display: block;
     border: none;
     outline: none;
@@ -88,11 +86,10 @@ button.add-article-submit:hover{
     text-decoration: none;
     border-radius: 25px;
     background: transparent linear-gradient(101deg, #f9464948 0%, hsla(348, 93%, 62%, 0.233) 30%, #f63fbf48 66%, #6c7dff3d 100%) 0% 0% no-repeat padding-box;
-    width: 9vw;
-    height: 5vh;
     justify-content: center;
     align-items: center;
-    margin: 0.5em;
+    width: 100%;
+    height: 100%;
 }
 .add-poster-input:focus + label,
 .add-poster-input + label:hover{
@@ -103,3 +100,16 @@ button.add-article-submit:hover{
 .add-poster-input + label{
     cursor: pointer;
 }
+
+@media only screen and (max-width: 720px){
+    textarea.content{
+        height: 30vh;
+        margin-top: 5em;
+    }
+    .add-poster{
+        grid-row: 2/3;
+        grid-column: 8/9;
+    }
+
+}
+

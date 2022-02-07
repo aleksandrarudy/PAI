@@ -12,19 +12,15 @@
 <body>
 <div class="profile-container">
     <?php include('header.php')?>
-    <?php
-    var_dump($profile);
-    var_dump($user);
-    if (isset($profile) && isset($user)) :?>
 
         <div class="profile">
             <a href="profile" class="profile-picture">
-                <img src="/public/img/uploads/<?= $profile->getProfilePicture() ?>">
+                <img src="/public/img/uploads/<?php if (isset($profile)){ echo $profile->getProfilePicture();} ?>">
             </a>
             <div class="user-name-biogram">
-                <h2 class="user-name"><?= $user->getUsername() ?></h2>
-                <p class="first-sur-name"><?= $profile->getFirstname() ?>  <?= $profile->getSurname() ?></p>
-                <p class="biogram"><?= $profile->getBiogram() ?></p>
+                <h2 class="user-name"><?php if (isset($user)){ echo $user->getUsername();} ?></h2>
+                <p class="first-sur-name"><?php if (isset($profile)){ echo $profile->getFirstname().' '.$profile->getSurname();} ?> </p>
+                <p class="biogram"><?php if (isset($profile)){ echo $profile->getBiogram();} ?></p>
             </div>
             <div class="edit-button">
                 <a href="addUserDetails" class="edit-profile-button">Edit profile</a>
@@ -37,17 +33,11 @@
             <div class="add-post">
                 <a href="addImage" class="feed-button">ADD POST</a>
             </div>
-
-            <div class="your-posts">
-                <a href="categories" class="feed-button">YOUR POSTS</a>
-            </div>
-
             <div class="add-article">
                 <a href="addArticle" class="feed-button">ADD ARTICLE</a>
             </div>
 
         </div>
-    <?php endif; ?>
 
 </div>
 

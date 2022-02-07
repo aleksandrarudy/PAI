@@ -72,6 +72,9 @@ class SecurityController extends AppController
             $_POST['user_name']
 
         );
+
+
+
         $message = $this->userRepository->addUser($user);
         return $this->render('login',['messages'=>[$message]]);
 

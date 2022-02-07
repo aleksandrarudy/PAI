@@ -68,15 +68,4 @@ class ArticleRepository extends Repository
         return $result;
     }
 
-    public function getArticleByTitleAndCont(string $searchString){
-        $searchString = '%' . strtolower($searchString) . '%';
-
-        $stmt = $this->database->connect()->prepare('
-            SELECT * FROM articles  WHERE LOWER(article_title) LIKE :search or LOWER(article_content) LIKE :search
-        ');
-        $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
-        $stmt->execute();
-
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
 }

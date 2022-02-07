@@ -15,7 +15,7 @@
         <?php include('header.php')?>
         <div class="category">
             <a href='/dashboard' class="header">Photos/</a>
-            <a href='/articles' class="header2">Articles/</a>
+            <a href='  /articles' class="header2">Articles/</a>
 
         </div>
         <div class="gallery_categories">

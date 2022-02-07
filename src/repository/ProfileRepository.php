@@ -28,27 +28,52 @@ class ProfileRepository extends Repository
         );
     }
 
-    public function addUserDetails(Profile $profile, User $user, $id_user_profile_details): void
+    public function addUserDetails(Profile $profile, $id_user_profile_details): void
     {
-
-        $stmt = $this->database->connect()->prepare('
-        update public.user_profile_details set firstname=:fn ,surname=:sn, biogram=:biogram, profile_picture=:pp WHERE id_user_profile_details=:idU;
-        ');
-
         $firstname = $profile->getFirstname();
         $surname = $profile->getSurname();
         $biogram = $profile->getBiogram();
         $profile_picture = $profile->getProfilePicture();
-        $stmt->bindParam(':fn', $firstname, PDO::PARAM_STR);
-        $stmt->bindParam(':sn', $surname, PDO::PARAM_STR);
-        $stmt->bindParam(':biogram', $biogram, PDO::PARAM_STR);
-        $stmt->bindParam(':pp', $profile_picture, PDO::PARAM_STR);
-        $stmt->bindParam(':idU', $id_user_profile_details, PDO::PARAM_INT);
-        $stmt->execute();
+
+        if ($id_user_profile_details===null){
+            $stmt = $this->database->connect()->prepare('
+        insert into  public.user_profile_details (firstname, surname, biogram, profile_picture) values (?,?,?,?) returning id_user_profile_details
+        ');
+            $stmt->execute([
+                $firstname,
+                $surname,
+                $biogram,
+                $profile_picture
+            ]);
+            $id_upd=$stmt->fetchColumn();
+            setcookie('profileDetails', $id_upd, time()+(86400*30),'/');
+
+            $stmt = $this->database->connect()->prepare('
+        update public.user set id_user_profile_details=:upd WHERE id_user=:idU;
+   ');
+
+            $stmt->bindParam(':upd', $id_upd, PDO::PARAM_INT);
+            $stmt->bindParam(':idU', $_COOKIE['id'], PDO::PARAM_INT);
+            $stmt->execute();
+
+        }
+        else{
+
+            $stmt = $this->database->connect()->prepare('
+        update public.user_profile_details set firstname=:fn ,surname=:sn, biogram=:biogram, profile_picture=:pp WHERE id_user_profile_details=:idU;
+        ');
+
+            $stmt->bindParam(':fn', $firstname, PDO::PARAM_STR);
+            $stmt->bindParam(':sn', $surname, PDO::PARAM_STR);
+            $stmt->bindParam(':biogram', $biogram, PDO::PARAM_STR);
+            $stmt->bindParam(':pp', $profile_picture, PDO::PARAM_STR);
+            $stmt->bindParam(':idU', $id_user_profile_details, PDO::PARAM_INT);
+            $stmt->execute();
+
+        }
+
 
     }
-
-
 
     public function getUserProfileIdById($id){
         $stmt = $this->database->connect()->prepare('
@@ -62,17 +87,6 @@ class ProfileRepository extends Repository
          return $stmt->fetch(PDO::FETCH_ASSOC)['id_user_profile_details'];
     }
 
-    public function getUserByUsername(string $searchString){
-        $searchString = '%' . strtolower($searchString) . '%';
-
-        $stmt = $this->database->connect()->prepare('
-            SELECT * FROM user WHERE LOWER(user_name) LIKE :search or LOWER(article_content) LIKE :search
-        ');
-        $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
-        $stmt->execute();
-
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
 
 
 }

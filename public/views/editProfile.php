@@ -26,10 +26,10 @@
 
             <div class="picture-and-biogram">
                 <a class="profile-picture">
-                    <img src="public/img/uploads/<?= $profile->getProfilePicture() ?>">
+                    <img src="public/img/uploads/<?php if (isset($profile)) : $profile->getProfilePicture()?><?php endif; ?>">
                 </a>
                 <div class="biogram">
-                    <h2 class="user-name"><?= $user->getUsername() ?></h2>
+                    <h2 class="user-name"><?php if (isset($user)) : $user->getUsername()?><?php endif; ?></h2>
                     <input class="user-profile-pic" type="file" name="p-file" id="p-file">
                     <label for="p-file">Edit profile picture</label>
                 </div>

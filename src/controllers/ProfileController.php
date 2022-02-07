@@ -28,9 +28,10 @@ class ProfileController extends AppController
 
     public function profile()
     {
-        $profile = $this->profileRepository->getUserDetails($this->id);
-        $user = $this->userRepository->getUserById($this->id);
-        $this->render('profile', ['profile'=>$profile, 'user'=>$user, 'messages' => $this->messages]);
+        $profile = $this->profileRepository->getUserDetails($_COOKIE['profileDetails']);
+        $user = $this->userRepository->getUser($_COOKIE['user']);
+        $this->render('profile', ['profile'=>$profile, 'user'=>$user]);
+
     }
 
     public function addUserDetails(){
@@ -44,11 +45,14 @@ class ProfileController extends AppController
             );
 
             $profile = new Profile($_POST['firstname'], $_POST['surname'],$_POST['biogram'],$_FILES['p-file']['name']);
-            $this->profileRepository->addUserDetails($profile, $user ,$this->idProfileDetails);
-
+            $this->profileRepository->addUserDetails($profile,$this->idProfileDetails);
+            $this->idProfileDetails=$_COOKIE['profileDetails'];
             return $this->profile();
         }
-        return $this->render('editProfile',['messages'=>$this->messages, 'profile'=>$profile, 'user'=>$user,]);
+        else {
+            return $this->render('editProfile',['messages'=>$this->messages, 'profile'=>$profile, 'user'=>$user,]);
+        }
+
     }
 
     private function validate(array $file): bool

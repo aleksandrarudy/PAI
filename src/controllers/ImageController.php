@@ -49,21 +49,12 @@ class ImageController extends AppController
 
     }
 
-    public function categories()
-    {
-        $images = $this->imageRepository->getAllImages();
-        $this->render('categories', ['images' =>$images]);
-
-    }
-
     public function image($id)
     {
-
         $image = $this->imageRepository->getImage($id);
         $userName = $this->userRepository->getUserById($id);
         $userPicture = $this->profileRepository->getUserDetails($id);
         $this->render('image', ['image' =>$image[0], 'userName'=>$image[1], 'userPicture'=>$image[2]]);
-
 
     }
 

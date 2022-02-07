@@ -1,5 +1,5 @@
 const search = document.querySelector('input[placeholder="search"]');
-const imageContainer = document.querySelector(".gallery");
+const imageContainer = document.querySelector(".gallery_categories");
 
 search.addEventListener("keyup", function (event) {
     if (event.key === "Enter") {

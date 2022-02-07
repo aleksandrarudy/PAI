@@ -12,11 +12,24 @@
 </head>
 <body>
     <div class="dashboard-container-w-title">
-        <?php include('header.php')?>
+        <header>
+            <a href="/dashboard">
+                <img src="/public/img/logo-gradient.svg">
+            </a>
+
+            <div class="search-bar">
+
+                <input class="search-input" placeholder="search">
+                <i class="fas fa-search"></i>
+
+            </div>
+            <a href="/profile" class="profil">
+                <i class="fas fa-user"></i>
+            </a>
+        </header>
         <div class="category">
             <a href='/dashboard' class="header">Photos/</a>
             <a href='  /articles' class="header2">Articles/</a>
-
         </div>
         <div class="gallery_categories">
             <?php foreach($images as $image): ?>

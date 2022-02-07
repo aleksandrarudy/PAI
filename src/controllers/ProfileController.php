@@ -26,7 +26,6 @@ class ProfileController extends AppController
         $this->idProfileDetails=$_COOKIE['profileDetails'];
     }
 
-    //akcja profile zmienna profile wyciąga id
     public function profile()
     {
         $profile = $this->profileRepository->getUserDetails($_COOKIE['profileDetails']);

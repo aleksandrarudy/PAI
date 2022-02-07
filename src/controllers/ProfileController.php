@@ -26,6 +26,7 @@ class ProfileController extends AppController
         $this->idProfileDetails=$_COOKIE['profileDetails'];
     }
 
+    //akcja profile zmienna profile wyciąga id
     public function profile()
     {
         $profile = $this->profileRepository->getUserDetails($_COOKIE['profileDetails']);
@@ -35,8 +36,7 @@ class ProfileController extends AppController
     }
 
     public function addUserDetails(){
-        $profile = $this->profileRepository->getUserDetails($this->id);
-        $user = $this->userRepository->getUserById($this->id);
+
         if ($this->isPost() && is_uploaded_file($_FILES['p-file']['tmp_name']) && $this->validate($_FILES['p-file']))
         {
             move_uploaded_file(
@@ -50,7 +50,7 @@ class ProfileController extends AppController
             return $this->profile();
         }
         else {
-            return $this->render('editProfile',['messages'=>$this->messages, 'profile'=>$profile, 'user'=>$user,]);
+            return $this->render('editProfile',['messages'=>$this->messages]);
         }
 
     }

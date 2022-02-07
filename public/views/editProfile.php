@@ -24,16 +24,6 @@
             }
             ?>
 
-            <div class="picture-and-biogram">
-                <a class="profile-picture">
-                    <img src="public/img/uploads/<?php if (isset($profile)) : $profile->getProfilePicture()?><?php endif; ?>">
-                </a>
-                <div class="biogram">
-                    <h2 class="user-name"><?php if (isset($user)) : $user->getUsername()?><?php endif; ?></h2>
-                    <input class="user-profile-pic" type="file" name="p-file" id="p-file">
-                    <label for="p-file">Edit profile picture</label>
-                </div>
-            </div>
             <div class="edit-profile-data">
                 <div class="data">
                     <a>Firstname</a>
@@ -48,6 +38,10 @@
                     <textarea class="data-input" rows='2' name="biogram" type="text"></textarea>
                 </div>
                 <div class="data">
+                    <div class="biogram">
+                        <input class="user-profile-pic" type="file" name="p-file" id="p-file">
+                        <label for="p-file">Edit profile picture</label>
+                    </div>
                     <button type="submit" class="save-button">Save changes</button>
                 </div>
 
